@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <nav id="nav" class="nav">
+            <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-menu">
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="18" x2="21" y2="18" /></svg>
+            <figure class="logo-contenedor">
+                <a class="logo" href="/"><img src="./images/logo.png" /></a>
+            </figure>
+            <div id="icons">
+                <svg class ="search" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-search">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                <a class="shop-link" href="./shop.html"><svg id="shop"  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-shopping-bag">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                    <line x1="3" y1="6" x2="21" y2="6" />
+                    <path d="M16 10a4 4 0 0 1-8 0" /></svg>
+                </a>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="principal">
+
+        <!--Carrusel-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-indicators">
+                <div>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                </div>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img id="portada1" src="images/portada1.png" class="d-block w-100 carousel-img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img id="portada2" src="images/portada2.png" class="d-block w-100 carousel-img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img id="portada3" src="images/portada3.png" class="d-block w-100 carousel-img" alt="...">
+                </div>
+            </div>
+        </div>
+
+        <button>SHOP NOW</button>
+
+    </main>
+
+
+    <section class="categorias container container-responsive  ">
+        <h1>CATEGORÍAS</h1>
+        <div class="row gx-4 gy-2">
+
+            <article  class="col-4 col-responsive">
+                <figure>
+                    <a><img id= "aretes" src="./images/aretes.png" /></a>
+                </figure>
+
+            </article >
+            <article   class="col-4 col-responsive">
+                <figure>
+                    <a><img id= "earcuffs" src="./images/earcuffs.png" /></a>
+                </figure>
+
+            </article >
+            <article  class="col-4 col-responsive">
+                <figure>
+                   <a > <img id="pulseras" class="foto" src="./images/pulseras.png" alt="Photo"></a>
+                </figure>
+
+            </article >
+            <article  class="col-4 col-responsive">
+                <figure>
+                    <a><img  id="collares"src="./images/collares.png" /></a>
+                </figure>
+            </article >
+
+            <article class="col-4 col-responsive">
+                <figure>
+                    <a><img  id="tobilleras"src="./images/tobilleras.png" /></a>
+                </figure>
+            </article >
+
+            <article  class="col-4 col-responsive">
+                <figure>
+                    <a><img id="anillos" src="./images/anillos.png" /></a>
+                </figure>
+            </article>
+    </section>
+    <section class="frase-motivacional">
+        <div class="swiper mySwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(min-width: 800px)" srcset="./images/frase1.png">
+                        <source media="(min-width: 340px)" srcset="./images/frase1R.png">
+                        <img class="foto" src="./images/frase1.png" alt="Photo">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(min-width: 800px)" srcset="./images/frase2.png">
+                        <source media="(min-width: 340px)" srcset="./images/frase2R.png">
+                        <img class="foto" src="./images/frase2.png" alt="Photo">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source media="(min-width: 800px)" srcset="./images/frase3.png">
+                        <source media="(min-width: 340px)" srcset="./images/frase3R.png">
+                        <img class="foto" src="./images/frase3.png" alt="Photo">
+                    </picture>
+                </div>
+
+
+                ...
+            </div>
+        </div>
+
+    </section>
+    <section class="coleccion">
+
+        <picture>
+            <source media="(min-width: 800px)" srcset="./images/collection.png">
+            <source media="(min-width: 340px)" srcset="./images/coleccionResponsive.png">
+            <img class="foto" src="./images/collection.png" alt="Photo">
+        </picture>
+
+        <button>SHOP COLLECTION</button>
+    </section>
+    <section class="subscripcion">
+
+        <picture>
+            <source media="(min-width: 800px)" srcset="./images/logo2.png">
+            <source media="(min-width: 340px)" srcset="./images/logo2R.png">
+            <img class="foto" src="./images/logo2.png" alt="Photo">
+        </picture>
+
+        <h1>¡No te lo pierdas!</h1>
+
+        <p>Suscríbete a nuestro newsletter para disfrutar de contenido exclusivo.</p>
+
+        <input placeholder="Dirección de correo electrónico">
+        <button>REGISTRARSE</button>
+
+    </section>
+   <footer>
+       
+            <a class="logo-footer"><img src="./images/logo3.png" /></a>
+  
+
+        <div>
+            <ul>
+                <li><a href="https://www.instagram.com/wearecaotico/?hl=es-la"><img src="./images/instagram.png" /></a>
+                </li>
+                <li><a href="https://www.instagram.com/wearecaotico/?hl=es-la"><img src="./images/whatsApp.png" /></a></li>
+                <li><a
+                        href="https://www.instagram.com/wearecaotico/?hl=es-la"><img
+                            src="./images/facebook.png" /></a></li>
+            </ul>
+
+            <a class="terminos-condiciones" href="https://onehalf.com.co/policies/terms-of-service"> Día sin IVA | Politícas de privacidad | Protección de datos personales | Términos y condiciones | Rastrea
+                tu envío nacional | Contáctanos</a>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
