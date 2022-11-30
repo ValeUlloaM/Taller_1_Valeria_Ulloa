@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+    <header>
+        <nav id="nav" class="nav">
+
+            <svg id="burger" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-menu">
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+
+            <figure class="logo-contenedor">
+                <a class="logo" href="/"><img src="./images/logo.png" /></a>
+            </figure>
+            <div id="icons">
+                <div class="search-box">
+                    <button class="buscador">
+                        <svg class="search" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                    </button>
+                    <input type="text" class="input-search" placeholder="Buscar...">
+                </div>
+
+                <a class="cart-link" href="./cart.html"><svg id="shop" xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-bag">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 0 1-8 0" />
+                    </svg>
+                </a>
+
+
+                <div class="usuario">
+                    <button id="btn-usuario"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                </div>
+
+
+            </div>
+
+
+        </nav>
+
+        
+
+
+
+    </header>
+    <section class="cont-menu activeMenu" id="menu">
+        <div id="inicio">
+            <h3 class="texto-entrar">Iniciar sesion</h3>
+            <form action="">
+                <input id="correo" class="input-entrar" placeholder="Correo electrónico" type="text">
+                <input id="constraseña" class="input-entrar" placeholder="Constraseña" type="password">
+                <button id="login" class="boton-entrar" type="submit">Iniciar sesion</button>
+            </form>
+        </div>
+
+        <br>
+
+        <button id="abrir-registro" class="boton-nuevoUsuario" type="submit">¿Nuevo usuario? Crea una cuenta </button>
+        <button id="cerrar-sesion" class="boton-cerrar" type="submit">Cerrar sesion </button>
+        <a id="access-admin" href="./admin.html">Admin</a>
+
+        <div id="registro" style="display:none">
+            <h3 class="texto-entrar">Crear usuario</h3>
+            <form action="">
+                <input id="info-correo" class="input-entrar" placeholder="Correo electrónico" type="text">
+                <input id="info-constraseña" class="input-entrar" placeholder="Constraseña" type="password">
+                <input id="confirmar" class="input-entrar" placeholder="Confirmar constraseña" type="password">
+                <button id="sign" class="boton-entrar" type="submit">Crear usuario</button>
+            </form>
+        </div>
+    </section>
+
+    <h1 class="titleCart">Carrito de compras</h1>
+    <div class="cart" id="cart">
+
+    </div>
+    <footer>
+
+        <a class="logo-footer"><img src="./images/logo3.png" /></a>
+
+
+        <div>
+            <ul>
+                <li><a href="https://www.instagram.com/wearecaotico/?hl=es-la"><img src="./images/instagram.png" /></a>
+                </li>
+                <li><a href="https://www.instagram.com/wearecaotico/?hl=es-la"><img src="./images/whatsApp.png" /></a>
+                </li>
+                <li><a href="https://www.instagram.com/wearecaotico/?hl=es-la"><img src="./images/facebook.png" /></a>
+                </li>
+            </ul>
+
+            <a class="terminos-condiciones" href="https://onehalf.com.co/policies/terms-of-service"> Día sin IVA |
+                Politícas de privacidad | Protección de datos personales | Términos y condiciones | Rastrea
+                tu envío nacional | Contáctanos</a>
+        </div>
+
+    </footer>
+</body>
+<script type="module" src="firebase.js"></script>
+<script type="module" src="auth.js"></script>
+<script type="module" src="cart.js"></script>
+
+</html>

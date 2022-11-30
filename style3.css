@@ -1,0 +1,147 @@
+.nav{
+    background-color: white;
+    position: absolute;
+}
+
+.buscador{
+    background-color: white;
+}
+
+.input-search{
+    background-color: white;
+}
+
+.info-item{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+#img{
+   width: 500px;
+  height: 500px;
+  margin-right: 100px;
+}
+
+h1{
+    font-family:  'Open Sans';
+    font-weight: 400;
+    padding-bottom: 30px;
+    font-size: 35px !important;
+
+}
+
+p{
+    font-family:  'Open Sans';
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.carrito{
+background-color: #F47310;
+color: white;
+border-style: none;
+font-family: 'Open Sans';
+font-size: 15px;
+font-weight: 600;
+width: 300px;
+height: 64px;
+letter-spacing: 3px;
+margin-bottom: 64px;
+margin-top: 30px;
+box-shadow: 0 2.89788px 5.79575px rgba(0, 0, 0, 0.15);
+}
+
+.carrito:hover {
+    width: 304px;
+    height: 68px;
+    background-color: #fd8a32
+}
+
+.wrapper{
+    height: 40px;
+    width: 160px;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  .wrapper span{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+  }
+  .wrapper span.num{
+    font-size: 16px;
+    border-right: 2px solid rgba(0,0,0,0.1);
+    border-left: 2px solid rgba(0,0,0,0.1);
+    pointer-events: none;
+  }
+
+  @media (max-width: 450px) {
+
+    #img{
+        width: 300px;
+        height: 300px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+     }
+
+     .info-item{
+        flex-direction: column;
+        padding-top: 180px;
+    }
+
+    h1{
+        font-weight: 200;
+        padding-bottom: 15px;
+        font-size: 24px !important;
+    }
+
+    p{
+        font-size: 18px;
+        font-weight: 200;
+    }
+
+    .wrapper{
+        height: 40px;
+        width: 140px;
+        margin-top: 15px
+      }
+
+      .search-box-responsive{
+        display: block;
+        background-color: transparent;
+        padding-top: 0px;
+    }
+
+    .input-responsive{ 
+    height: 50px !important;
+    width: 270px !important;
+    margin-bottom: 50px !important;
+    border-style: solid !important;
+    border-width: 1.5px !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-color: black !important;
+    padding: 10px !important;
+    font-size: 18px !important;
+    font-family: 'Open Sans';
+    outline: none;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    color: black;
+    }
+
+}
+  

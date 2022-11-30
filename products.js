@@ -1,183 +1,175 @@
-const products = [
+import {products} from './utils.js'
 
-    {
-        imgUrl: "./shop-images/anillo1.png",
-        name: "Carita",
-        category: "Anillos",
-        price: "$15.000",
-        material: "Rodio"
-    },
+let shop = products;
 
-    {
-        imgUrl: "./shop-images/collar1.png",
-        name: "Ancla",
-        category: "Collares",
-        price: "$25.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/ear1.png",
-        name: "Grecia",
-        category: "Earcuffs",
-        price: "$20.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/anillo2.png",
-        name: "Margarita",
-        category: "Anillos",
-        price: "$15.000",
-        material: "Rodio"
-    },
-
-    {
-        imgUrl: "./shop-images/collar2.png",
-        name: "Arito",
-        category: "Collares",
-        price: "$25.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/ear2.png",
-        name: "Bolitas",
-        category: "Earcuffs",
-        price: "$15.000",
-        material: "Rodio"
-    },
-
-    {
-        imgUrl: "./shop-images/pulsera1.png",
-        name: "Arito",
-        category: "Pulseras",
-        price: "$20.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/anillo3.png",
-        name: "Corazones",
-        category: "Anillos",
-        price: "$15.000",
-        material: "Rodio"
-    },
-
-    {
-        imgUrl: "./shop-images/collar3.png",
-        name: "Costelación",
-        category: "Collares",
-        price: "$20.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/ear3.png",
-        name: "Ondas",
-        category: "Earcuffs",
-        price: "$20.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/pulsera2.png",
-        name: "Colorcitos",
-        category: "Pulseras",
-        price: "$20.000",
-        material: "Plástico"
-    },
-
-    {
-        imgUrl: "./shop-images/anillo4.png",
-        name: "Mariposita",
-        category: "Anillos",
-        price: "$15.000",
-        material: "Rodio"
-    },
-
-    {
-        imgUrl: "./shop-images/collar4.png",
-        name: "Solecito",
-        category: "Collares",
-        price: "$25.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/ear4.png",
-        name: "Fresita",
-        category: "Earcuffs",
-        price: "$15.000",
-        material: "Rodio"
-    },
-
-    {
-        imgUrl: "./shop-images/anillo5.png",
-        name: "Círculo",
-        category: "Anillos",
-        price: "$15.000",
-        material: "Rodio"
-    },
-
-    {
-        imgUrl: "./shop-images/collar5.png",
-        name: "Cuchillo",
-        category: "Collares",
-        price: "$25.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/ear5.png",
-        name: "Perlitas set",
-        category: "Earcuffs",
-        price: "$70.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/anillo6.png",
-        name: "Cadenitas",
-        category: "Anillos",
-        price: "$15.000",
-        material: "Plástico"
-    },
-
-    {
-        imgUrl: "./shop-images/collar6.png",
-        name: "Arcoíris",
-        category: "Collares",
-        price: "25.000",
-        material: "Acero"
-    },
-
-    {
-        imgUrl: "./shop-images/ear6.png",
-        name: "Diosita",
-        category: "Earcuffs",
-        price: "20.000",
-        material: "Acero"
-    },
-
-]
+console.log(products); 
+let filteredProducts  = [];
+let keyword2 =  "" ;
+let keyword =  "" ;
+let category = "all";
+let material = "material";
+let price = "price";
 
 
-const productSection = document.getElementById('products')
-displayProducts()
+displayProducts(shop);
+displayCategories();
+displayPrice();
+displayMaterial();
 
-function displayProducts() {
-    products.forEach(product => {
+// Crear Listeners
+const keywordElement = document.getElementById('keyword')
+keywordElement.addEventListener('change', () => handleKeyword(keywordElement));
+
+const keywordElement2 = document.getElementById('keyword2')
+keywordElement2.addEventListener('change', () => handleKeyword2(keywordElement2));
+
+const categoryElement = document.getElementById('category')
+categoryElement.addEventListener('change', () => handleCategories(categoryElement));
+
+const priceElement = document.getElementById('price')
+priceElement.addEventListener('change', () => handlePrice (priceElement));
+
+const materialElement = document.getElementById('material')
+materialElement.addEventListener('change', () => handleMaterial (materialElement));
+
+// Metodos de display
+function displayProducts(arrayProducts) {
+    const productSection = document.getElementById('products')
+    productSection.innerHTML = '';
+    console.log('hola');
+
+    arrayProducts.forEach((product) => {
         const card = document.createElement('article')
         card.classList.add('card')
         card.innerHTML =
-        `
+        ` <a href="./details.html?name=${product.name}">
         <img src="${product.imgUrl}" class="card-img-top">
          <div class="card-body">
               <h5 class="name">${product.name}</h5>
               <p class="price">${product.price}</p>
         </div>
+        </a>
         `
         productSection.append(card)
     });
+}
+
+function displayCategories(){
+    const categoriesArray = [];
+    shop.forEach((product) => {
+        if(!categoriesArray.includes(product.category)) {
+            categoriesArray.push(product.category);
+        }
+    });
+
+    const dropdown = document.getElementById('category');
+
+    categoriesArray.forEach((category) => {
+        const optionElement = document.createElement('option');
+        optionElement.value = category;
+        optionElement.textContent = category;
+
+        dropdown.append(optionElement);
+    })
+
+    console.log(categoriesArray);
+}
+
+function displayPrice(){
+    const priceArray = [];
+    
+    shop.forEach((product) => {
+        if(!priceArray.includes(product.price)) {
+            priceArray.push(product.price)
+        }
+    });
+
+    const dropdown = document.getElementById('price')
+
+    priceArray.forEach((price) => {
+        const optionElement = document.createElement('option')
+        optionElement.value = price
+        optionElement.textContent = price
+
+        dropdown.append(optionElement)
+    })
+    console.log(priceArray)
+}
+
+function displayMaterial(){
+    const materialArray = [];
+    
+    shop.forEach((product) => {
+        if(!materialArray.includes(product.material)) {
+            materialArray.push(product.material)
+        }
+    });
+
+    const dropdown = document.getElementById('material')
+
+    materialArray.forEach((material) => {
+        const optionElement = document.createElement('option')
+        optionElement.value = material
+        optionElement.textContent = material
+
+        dropdown.append(optionElement)
+    })
+
+    console.log(materialArray)
+}
+
+// Metodos de eventos
+function handleKeyword(input) {
+     keyword = input.value;
+     filterByAllFilters();
+    displayProducts(filteredProducts);
+}
+function handleKeyword2(input) {
+    keyword2 = input.value;
+    filterByAllFilters();
+   displayProducts(filteredProducts);
+}
+
+function handleCategories(input){
+    category = input.value;
+    filterByAllFilters();
+    displayProducts(filteredProducts);
+
+}
+
+function handlePrice(input){
+    price = input.value;
+    filterByAllFilters();
+    displayProducts(filteredProducts);
+
+}
+
+function handleMaterial(input){
+    material = input.value;
+    filterByAllFilters();
+    displayProducts(filteredProducts);
+
+}
+
+function filterByAllFilters(){
+ filteredProducts = shop.filter((product)=> { 
+
+    const hasKeyword = 
+    product.name.toLowerCase().includes(keyword.toLowerCase())|| 
+    product.category.toLowerCase().includes(keyword.toLowerCase());
+
+    const hasKeyword2 = 
+    product.name.toLowerCase().includes(keyword2.toLowerCase())|| 
+    product.category.toLowerCase().includes(keyword2.toLowerCase());
+
+    const isCategory = product.category === category || category === 'all';
+
+    const isMaterial = product.material === material || material === 'material'
+
+    const isPrice = product.price === price || price === 'price'
+
+    return   hasKeyword2  && hasKeyword  && isCategory  && isMaterial  && isPrice
+    
+})
+
 }

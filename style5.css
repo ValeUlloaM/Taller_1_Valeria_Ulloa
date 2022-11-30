@@ -1,0 +1,131 @@
+.titleCart {
+    padding-top:150px;
+    display: flex;
+    padding-left: 120px;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 38px;
+    letter-spacing: 3px;
+}
+
+.cart{
+    width: 100%;
+    padding-left: 120px; 
+    margin-bottom:5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ 
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.card{ 
+    margin-right: 50px !important;
+}
+
+.name{
+    font-weight: 400;
+    padding-bottom: 15px;
+    font-size: 24px !important;
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans';
+    
+}
+
+.price{
+    font-size: 17px;
+    font-weight: 200;
+    color: black;
+    font-family: 'Open Sans';
+    text-decoration: none !important;
+    padding-bottom: 15px;
+}
+
+.eliminarBtn{
+    background-color: transparent;
+    color: black;
+    border-color: black;
+    border-style: solid;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-weight: 400;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 64px;
+    margin-top: 10px;
+    box-shadow: 0 2.89788px 5.79575px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 450px) {
+
+    .titleCart{
+        justify-content: center;
+        padding-left: 0px;
+        padding-bottom: 0px;
+    }
+    .card-img-top{
+        width: 200px;
+    }
+
+    .cart{
+     
+        padding-top: 70px;
+        padding-left: 0px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+
+    .name{
+    font-size: 20px !important;
+    padding-bottom: 5px;
+    
+    }
+    
+    .price{
+    font-size: 16px !important;
+    }
+
+    .eliminarBtn{
+        width: 200px; 
+    }
+
+
+    #icons {
+        margin-top: 10%;
+    }
+
+    #burger {
+        margin-top: 16%;
+    }
+
+    .logo-contenedor {
+        text-align: center;
+        padding-top: 0px !important;
+    }
+
+    .logo {
+        width: 50%;
+        height: 50%;
+    }
+
+    .logo>img {
+        width: 60px;
+    }
+
+  
+
+   
+}

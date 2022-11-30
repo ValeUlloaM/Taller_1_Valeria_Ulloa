@@ -1,0 +1,109 @@
+h1{
+    font-family:  'Open Sans';
+    font-weight: 400;
+    padding-bottom: 30px;
+    font-size: 20px !important;
+
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 100px;
+    padding-left: 130px;
+    background-color: #FEDF63;
+    
+}
+
+.info-input {
+    background-color: transparent;
+    border-color: black;
+    border-radius: 0px !important;
+    border-style: solid;
+    width: 500px !important;
+    height: 56px;
+    font-weight: 300;
+    text-align:left;
+    padding-left: 15px;
+}
+
+
+#name-input{
+    margin-bottom: 25px; 
+}
+
+#category-input{
+    margin-bottom: 25px; 
+}
+
+#price-input{
+    margin-bottom: 25px; 
+}
+
+#material-input{
+    margin-bottom: 25px; 
+}
+
+
+
+#add-product{
+    background-color: #F47310;
+    color: white;
+    border-style: none;
+    font-family: 'Open Sans';
+    font-size: 15px;
+    font-weight: 600;
+    width: 300px;
+    height: 64px;
+    letter-spacing: 3px;
+    margin-bottom: 64px;
+    margin-top: 30px;
+    box-shadow: 0 2.89788px 5.79575px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 450px) {
+        #icons {
+            margin-top: 10%;
+        }
+    
+        #burger {
+            margin-top: 16%;
+        }
+    
+        .logo-contenedor {
+            text-align: center;
+            padding-top: 0px !important;
+        }
+    
+        .logo {
+            width: 50%;
+            height: 50%;
+        }
+    
+        .logo>img {
+            width: 60px;
+        }
+
+        .input-container{
+            padding-top: 200px ;
+            padding-left: 20px;
+        }
+
+        .info-input {
+            
+            width: 300px !important;
+            height: 46px;
+            font-weight: 300;
+            text-align:left;
+           
+        }
+
+        
+        
+
+    
+      
+    
+       
+    }

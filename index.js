@@ -1,7 +1,3 @@
-
-
-// HEADER
-
 function cambioNav(){
 
     const navBar = document.getElementById("nav");
@@ -31,9 +27,6 @@ function unhover(element) {
     element.setAttribute('src', 'http://dummyimage.com/100x100/000/fff');
 }
 
-
-
-
 // FRASE MOTIVACIONAL
 
 var swiper = new Swiper(".mySwiper", {
@@ -44,4 +37,3 @@ var swiper = new Swiper(".mySwiper", {
         disableOnInteraction: false,
       },
   });
-
